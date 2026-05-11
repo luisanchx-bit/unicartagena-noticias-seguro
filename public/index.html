@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Universidad de Cartagena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="boton-sesion-container" class="session-buttons">
+                <!-- El botón se carga dinámicamente con JavaScript -->
+                <a href="/login.html" class="btn-sesion">🔐 Área Administrativa</a>
+            </div>
+            <h1>📢 Universidad de Cartagena</h1>
+            <p class="subtitulo">Portal de Noticias Oficial</p>
+        </header>
+
+        <div class="filtros">
+            <button class="filtro-btn activo" data-categoria="todas">Todas</button>
+            <button class="filtro-btn" data-categoria="convocatorias">Convocatorias</button>
+            <button class="filtro-btn" data-categoria="eventos">Eventos</button>
+            <button class="filtro-btn" data-categoria="generales">Generales</button>
+        </div>
+
+        <div id="noticias-container" class="noticias-grid">
+            <!-- Las noticias se cargarán aquí -->
+        </div>
+
+        <footer>
+            <p>🔒 Portal seguro - Universidad de Cartagena</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
