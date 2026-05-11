@@ -26,7 +26,8 @@ app.use(session({
 }));
 
 // ========== BASE DE DATOS ==========
-const db = new sqlite3.Database(path.join(__dirname, 'database.sqlite'));
+const dbPath = path.join(__dirname, 'database.sqlite');
+const db = new sqlite3.Database(dbPath);
 
 db.serialize(() => {
     // Tabla de usuarios
@@ -148,7 +149,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// ========== VERIFICAR SESIÓN (para el botón dinámico) ==========
+// ========== VERIFICAR SESIÓN ==========
 app.get('/api/verificar-sesion', (req, res) => {
     if (req.session.user) {
         res.json({ logueado: true, usuario: req.session.user.username });
