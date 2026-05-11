@@ -1,23 +1,28 @@
 {
-  "name": "miappsegura",
+  "name": "unicartagena-noticias-seguro",
   "version": "1.0.0",
-  "description": "App segura contra OWASP Top 10",
+  "description": "Portal de noticias de la Universidad de Cartagena con sistema de login seguro y bloqueo exponencial",
   "main": "backend/server.js",
   "scripts": {
-    "start": "node backend/server.js"
-  },
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "better-sqlite3": "^12.9.0",
-    "express": "^4.22.1",
-    "express-rate-limit": "^7.5.1",
-    "express-session": "^1.19.0",
-    "helmet": "^7.2.0"
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
   },
   "keywords": [
-    "security",
+    "universidad",
+    "cartagena",
+    "noticias",
+    "seguridad",
+    "login",
+    "bloqueo",
     "owasp"
   ],
-  "author": "",
-  "license": "ISC"
+  "author": "luisanchx-bit",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "sqlite3": "^5.1.7"
+  }
 }
